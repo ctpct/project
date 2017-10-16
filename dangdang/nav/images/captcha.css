@@ -1,0 +1,192 @@
+@charset "utf-8";
+.Captcha {
+    background-color: #f6f9fb;
+    border: 1px solid #e6e6e6;
+    font-size: 14px;
+    margin-bottom: 10px;
+    padding: 5px 5px 0;
+    width: 300px;
+}
+.Captcha label.error {
+    display: none;
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    color: #f42e00;
+    left: 0;
+    line-height: inherit;
+    opacity: 0;
+    padding: 0;
+    border: none;
+    position: absolute;
+    top: 0;
+    transform: translate(-20px, 0px);
+    transition: all 0.25s ease-out 0s;
+    visibility: hidden;
+}
+.Captcha label.error.is-visible {
+    opacity: 1;
+    transform: translate(0px, 0px);
+    visibility: visible;
+}
+.Captcha .sprite-index-icon-refresh {
+    background-image: url("../images/captch_icon.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    height: 16px;
+    width: 16px;
+}
+.Captcha .Captcha-imageConatiner {
+    margin: auto;
+    position: relative;
+    width: 200px;
+}
+.Captcha .Captcha-image {
+    -moz-user-select: none;
+    display: block;
+    height: 44px;
+    margin: auto;
+    width: 200px;
+}
+.Captcha .Captcha-mark {
+    position: absolute;
+}
+.Captcha .Captcha-operate {
+    color: #555;
+    height: 16px;
+    line-height: 16px;
+    margin: 0 10px 5px;
+    position: relative;
+}
+.Captcha .Captcha-refresh {
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.Captcha .Captcha-prompt {
+    font-size: 14px;
+    opacity: 1;
+    position: absolute;
+    transform: translate(0px, 0px);
+    transition: all 0.25s ease-out 0s;
+    vertical-align: middle;
+    visibility: visible;
+}
+.Captcha .Captcha-prompt.is-hidden {
+    opacity: 0;
+    transform: translate(20px, 0px);
+    visibility: hidden;
+}
+
+.Captcha .Captcha-button{
+    position: absolute;
+    background-image: url("../images/captch_icon.png");
+    background-repeat: no-repeat;
+    background-position: 0px -37px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    z-index: 99999;
+}
+
+.Captcha .Captcha-button:hover{
+    background-image: url("../images/captch_icon.png");
+    background-repeat: no-repeat;
+    background-position: 0px -19px;
+    width: 14px;
+    height: 14px;
+}
+/*
+.Captcha .Captcha-button {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+
+    background: #FF2832;
+    color: #fff;
+    text-align:center;
+    font-size: .8em;
+    line-height: .9em;
+
+    -moz-box-shadow: 1px 1px 1px #ccc;
+    -webkit-box-shadow: 1px 1px 1px #ccc;
+    box-shadow: 1px 1px 1px #ccc;
+
+    cursor: pointer;
+
+    z-index: 99999;
+}
+*/
+
+/*20161121add  css for rotate vcode*/
+.Rotate {
+    font-size: 14px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    padding: 0;
+    width: 312px;
+}
+.Rotate .Rotate-background {
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    float: left;
+    margin: 0 1px 0;
+    height: 76px;
+    width: 76px;
+}
+.Rotate .Rotate-operate {
+    color: #555;
+    height: 16px;
+    line-height: 16px;
+    margin: 0 1px 8px;
+    position: relative;
+}
+.Rotate label.error {
+    display: none;
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    color: #f42e00;
+    left: 0;
+    line-height: inherit;
+    opacity: 0;
+    padding: 0;
+    border: none;
+    position: absolute;
+    top: 0;
+    transform: translate(-20px, 0px);
+    transition: all 0.25s ease-out 0s;
+    visibility: hidden;
+}
+.Rotate label.error.is-visible {
+    opacity: 1;
+    transform: translate(0px, 0px);
+    visibility: visible;
+}
+.Rotate .Rotate-prompt {
+    font-size: 14px;
+    opacity: 1;
+    position: absolute;
+    transform: translate(0px, 0px);
+    transition: all 0.25s ease-out 0s;
+    vertical-align: baseline;
+    visibility: visible;
+}
+.Rotate .Rotate-prompt.is-hidden {
+    opacity: 0;
+    transform: translate(20px, 0px);
+    visibility: hidden;
+}
+.Rotate .Rotate-refresh {
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.Rotate a {
+    color:#1a66b3;
+    text-decoration:none;
+}
+.Rotate a:hover {
+    text-decoration:underline;
+}

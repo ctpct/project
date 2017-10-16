@@ -1,0 +1,203 @@
+body,h1,h2,h3,ul,li,ol,dl,dd,button{
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+}
+a {text-decoration: none;}
+.clearfix:before,.clearfix:after{
+    content:"";
+    display:table;
+}
+.clearfix:after {
+    clear:both;
+}
+.clearfix {
+    *zoom: 1;
+}
+
+
+.head {
+    width: 1200px;
+    height: 60px;
+    margin: 20px auto 0;
+}
+.head a img {
+    float: left;
+
+}
+.h-right {
+    float:right;
+    margin-top: 28px;
+}
+.h-right a {
+    color:#b0b0b0;
+
+}
+.banner {
+    height: 590px;
+    background: url(../images/2017083010193576856.jpg) no-repeat center center;
+}
+.b-center{
+    width: 1200px;
+    margin:0 auto;
+}
+.login-in {
+    width: 360px;
+    height: 350px;
+    background-color: #fff;
+    float: right;
+    margin-top: 90px;
+    box-sizing:border-box;
+    /*padding:0 25px 0;*/
+    padding-left: 25px;
+}
+.banner .login-in h1 {
+    float:left;
+    font-size: 18px;
+    margin-top: 24px;
+    font-weight: 400;
+}
+.banner .login-in .erwei {
+    float:right;
+    margin-top: 8px;
+    margin-right:7px;
+}
+.banner .l-1 {
+    float:right;
+    background-color: #ccc;
+    border:1px solid #ffe8e2;
+    width: 120px;
+    height: 26px;
+    margin-top: 8px;
+    background: #fef7f5;
+    padding:4px;
+
+    color:#ffb195;
+}
+.banner .l-1 img {
+    vertical-align:middle;
+}
+
+.banner .user input,.banner .pwd input {
+    width: 310px;
+    height: 36px;
+    border: 1px solid #dcdcdc;
+    outline: none;
+    padding-left: 38px;
+    box-sizing: border-box;
+    color: #ccc;
+}
+.banner .pwd input {
+
+    margin-top: 28px;
+}
+.banner .user{position: relative;}
+
+.banner .user:after {
+    content:"";
+    display: block;
+    position: absolute;
+    top: 76px;
+    left: 10px;
+    background: url("../images/icon_20150706.png") 0 -120px no-repeat;
+    width: 17px;
+    height: 17px;
+}
+.banner .pwd{position: relative;}
+.banner .pwd:after {
+    content:"";
+    display: block;
+    position: absolute;
+    top: 36px;
+    left: 10px;
+    background: url("../images/icon_20150706.png") 0 -160px no-repeat;
+    width: 17px;
+    height: 17px;
+}
+.banner .ckb {
+    margin-top: 40px;
+}
+.banner .ckb a {
+    float: right;
+    margin-right: 25px;
+}
+.banner .sub input {
+    width: 312px;
+    height: 44px;
+    border-radius: 5px;
+    background-color: #ff2832;
+    border:none;
+    color:#fff;
+    font-size:20px;
+    margin-bottom: 14px;
+    margin-top:10px;
+}
+.banner .sub input:hover{
+    background-color: #fff;
+    color:red;
+}
+.banner .mlink {
+    width: 110px;
+    float:left;
+}
+.banner .mlink div {
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin-right: 4px;
+}
+.banner .mlink .icon1{
+    background:url(../images/icon_20150706.png) 0 -260px no-repeat;
+}
+.banner .mlink .icon2{
+    background:url(../images/icon_20150706.png) 0 -280px no-repeat;
+}
+.banner .mlink .icon3{
+    background:url(../images/icon_20150706.png) 0 -300px no-repeat;
+}
+.banner .mlink .icon4{
+    background:url(../images/icon_20150706.png) 0 -320px no-repeat;
+}
+.banner .mlink .icon1:hover{
+    background:url(../images/icon_20150706.png) -20px -260px no-repeat;
+}
+.banner .mlink .icon2:hover{
+    background:url(../images/icon_20150706.png) -20px -280px no-repeat;
+}
+.banner .mlink .icon3:hover{
+    background:url(../images/icon_20150706.png) -20px -300px no-repeat;
+}
+.banner .mlink .icon4:hover{
+    background:url(../images/icon_20150706.png) -20px -320px no-repeat;
+}
+.banner .zhuce {
+    float:right;
+    margin-right: 25px;
+}
+.foot-nav {
+    margin-top:48px;
+    text-align:center;
+
+}
+.foot-nav span {
+    margin:0 20px;
+}
+.foot-copy {
+    text-align:center;
+    margin-top: 34px;
+}
+.foot-copy2 {
+    text-align:center;
+    margin-top: 14px;
+}
+.foot-copy2 span{
+    margin:0 10px;
+    line-height: 20px;
+}
+.foot-img {
+    text-align: center;
+    margin-top: 28px;
+}
+.foot-img img {
+    margin-right: 6px;
+}

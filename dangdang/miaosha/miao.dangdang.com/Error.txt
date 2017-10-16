@@ -1,0 +1,2 @@
+﻿文件下载网址  =>  文件保存路径
+http://miao.dangdang.com/Standard/Framework/Extend/hosts/css/images/bg_del.png  =>  C:\Users\k\Desktop\learn\look\单页扒站小工具\miao.dangdang.com\images\bg_del.png

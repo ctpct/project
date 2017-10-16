@@ -1,0 +1,1234 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>正青春 当奋斗 图书服装百货每满200减100 电子书每20减10</title>
+    <link rel="icon" href="images/dangdang.png"/>
+    <link rel="stylesheet" href="kaixueji.css"/>
+    <script src="jquery.min.js"></script>
+    <script src="kaixueji.js"> </script>
+    <script>
+        $(function () {
+            $("#add").mouseenter(function () {
+                $("#dizhi").css("display","block");
+            })
+            $("#dizhi").mouseleave(function () {
+                $("#dizhi").css("display","none");
+            })
+            $("#ul3").mouseenter(function () {
+                $("#dangdang").css("display","block");
+            })
+            $("#dangdang").mouseleave(function () {
+                $("#dangdang").css("display","none");
+            })
+            $("#ul4").mouseenter(function () {
+                $("#heihei").css("display","block");
+            })
+            $("#heihei").mouseleave(function () {
+                $("#heihei").css("display","none");
+            })
+            $("#ul5").mouseenter(function () {
+                $("#hehe").css("display","block");
+            })
+            $("#hehe").mouseleave(function () {
+                $("#hehe").css("display","none");
+            })
+
+
+
+//            抽奖部分
+            $(".fendou .jiangxuejin").click(function () {
+                $(".choujiang .showBox").show();
+                return false;
+            })
+            $(".choujiang").click(function () {
+                $(".choujiang .showBox").show();
+                return false;
+            })
+            $(".showBox .close a").click(function () {
+                $(".choujiang .showBox").hide();
+                return false;
+            })
+            $(".showBox .checkWord img").click(function (e) {
+//       $(".showBox .checkWord img").click(function (e) {
+//
+//                $(".showBox .checkWord").append($("<div class='yuan'>"));
+//                var x= e.offsetX;
+//                var Y= e.offsetY;
+//                $(".yuan").css({"left":x,"top":Y})
+//                     ("$yuan").css({
+//                    "left":50+relativeX,
+//                    "top": 30+relativeY
+//                })
+
+//            })
+
+                $(".showBox .checkWord").append($("<div class='yuan'>"));
+                var offset = $(this).offset();
+                var relativeX = (e.pageX - offset.left);
+                var relativeY = (e.pageY - offset.top);
+                console.log(offset.left);
+                console.log(e.pageX);
+
+               $(".yuan").css({
+                    "left":50+relativeX,
+                    "top": 30+relativeY
+                })
+
+            })
+        })
+    </script>
+</head>
+<body>
+    <!--顶部部分开始-->
+    <div class="nav clearfix">
+        <div id="add">
+            <a href="#">送至 : 北京</a>
+        </div>
+        <div class="add-pre" id="dizhi">
+            <ul>
+                <li><a href="#">北京</a></li>
+                <li><a href="#">天津</a></li>
+                <li><a href="#">河北</a></li>
+                <li><a href="#">山西</a></li>
+                <li><a href="#">内蒙古</a></li>
+                <li><a href="#">辽宁</a></li>
+                <li><a href="#">吉林</a></li>
+                <li><a href="#">黑龙江</a></li>
+                <li><a href="#">上海</a></li>
+                <li><a href="#">江苏</a></li>
+                <li><a href="#">浙江</a></li>
+                <li><a href="#">安徽</a></li>
+                <li><a href="#">福建</a></li>
+                <li><a href="#">江西</a></li>
+                <li><a href="#">山东</a></li>
+                <li><a href="#">河南</a></li>
+                <li><a href="#">湖北</a></li>
+                <li><a href="#">湖南</a></li>
+                <li><a href="#">广东</a></li>
+                <li><a href="#">广西</a></li>
+                <li><a href="#">海南</a></li>
+                <li><a href="#">重庆</a></li>
+                <li><a href="#">四川</a></li>
+                <li><a href="#">贵州</a></li>
+                <li><a href="#">云南</a></li>
+                <li><a href="#">西藏</a></li>
+                <li><a href="#">陕西</a></li>
+                <li><a href="#">甘肃</a></li>
+                <li><a href="#">青海</a></li>
+                <li><a href="#">宁夏</a></li>
+                <li><a href="#">新疆</a></li>
+                <li><a href="#">台湾</a></li>
+                <li><a href="#">香港</a></li>
+                <li><a href="#">澳门</a></li>
+                <li><a href="#">钓鱼岛</a></li>
+            </ul>
+        </div>
+        <p>欢迎光临当当,请<a href="../shopping/login/login.html" class="p-a">登录 </a><a href="#">成为会员</a></p>
+        <ul class="ul2">
+            <li><a href="#"><span>丨</span>我的云书房</a><span>丨</span></li>
+            <li id="ul3">
+                <a href="#">我的当当</a>
+                <span>丨</span>
+                <div class="jingling"></div>
+                <ul class="ul3" id="dangdang">
+                    <li><a href="#">我的订单</a></li>
+                    <li><a href="#">购物车</a></li>
+                    <li><a href="#">积分抵现</a></li>
+                    <li><a href="#">我的收藏</a></li>
+                    <li><a href="#">我的余额</a></li>
+                    <li><a href="#">我的评论</a></li>
+                    <li><a href="#">礼券/礼品卡</a></li>
+                </ul>
+            </li>
+            <li><a href="#">小说投稿</a><span>丨</span></li>
+            <li id="ul4"><a href="#">企业采购</a>
+                <span>丨</span>
+                <div class="jingling"></div>
+                <ul class="ul4" id="heihei">
+                    <li><a href="#">大宗采购</a></li>
+                    <li><a href="#">礼品卡采购</a></li>
+                    <li><a href="#">礼品卡激活</a></li>
+                    <li><a href="#">礼品卡使用</a></li>
+                    <li><a href="#">3c数码团购</a></li>
+                </ul>
+            </li>
+            <li id="ul5"><a href="#">客服服务</a>
+                <div class="jingling"></div>
+                <ul class="ul5" id="hehe">
+                    <li><a href="#">帮助中心</a></li>
+                    <li><a href="#">自助退换货</a></li>
+                    <li><a href="#">自助发票</a></li>
+                    <li><a href="#">联系客服</a></li>
+                    <li><a href="#">我要投诉</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!--顶部部分结束-->
+    <!--搜索部分开始-->
+    <div id="search">
+         <div class="search contain clearfix">
+        <div class="feilei" id="feilei">
+            <span>全部分类</span>
+            <div class="jiantou"></div>
+        </div>
+        <div class="feilei1" id="feilei1">
+            <ul>
+                <li>全部分类</li>
+                <li>尾品汇</li>
+                <li>图书</li>
+                <li>电子书</li>
+                <li>音像</li>
+                <li>影视</li>
+                <li>时尚美妆</li>
+                <li>母婴用品</li>
+                <li>童装童鞋</li>
+                <li>家居日常</li>
+                <li>家居装饰</li>
+                <li>服装</li>
+                <li>鞋</li>
+                <li>箱包皮具</li>
+                <li>手表饰品</li>
+                <li>运动户外</li>
+                <li>汽车用品</li>
+                <li>食品</li>
+                <li>手机通讯</li>
+                <li>数码影音</li>
+                <li>电脑办公</li>
+                <li>大家电</li>
+                <li>家用电器</li>
+            </ul>
+        </div>
+             <a href="../index/index.html"><img src="images/doodle3.gif" alt=""/></a>
+        <input type="text" value="开学大促 每200减100" id="jiaodian2"/>
+        <input type="button" class="sousuo"/>
+        <div class="jingling3">
+        </div>
+        <div class="search-right">
+            <ul>
+                <li>
+                    <div class="jingling4"></div>
+                    <a href="../shopping/shopping/shopping.html">购物车
+                        <span id="red">0
+                        </span>
+                    </a>
+                </li>
+                <li><a href="#">我的订单</a></li>
+            </ul>
+        </div>
+        <div class="search-hot">
+            热搜:
+            <a href="#">黄冈小状元</a>
+            <a href="#">开学新装</a>
+            <a href="#">每满200减100</a>
+            <a href="#">舒克贝塔传</a>
+            <a href="#">学生文具</a>
+            <a href="#">尾品汇</a>
+        </div>
+        <a href="#" class="gaoji">高级搜索</a>
+
+
+    </div>
+    </div>
+    <!--搜索部分结束-->
+
+    <!--小导航开始-->
+    <div class="sub">
+        <div class="width960">
+            <ul>
+                <li><a name="nav2" target="_blank" href="http://bang.dangdang.com/books/bestsellers/01.00.00.00.00.00-recent7-0-0-1-1">图书畅销榜</a></li>
+                <li><a name="nav2" target="_blank" href="http://bang.dangdang.com/books/childrensbooks">童书榜</a></li>
+                <li><a name="nav2" target="_blank" href="http://category.dangdang.com/cid4003844.html">女装热卖</a></li>
+                <li><a name="nav2" target="_blank" href="http://category.dangdang.com/cid10010336.html">男士服装</a></li>
+                <li><a name="nav2" target="_blank" href="http://category.dangdang.com/cid4009359.html">童装</a></li>
+                <li><a name="nav2" target="_blank" href="http://category.dangdang.com/cid4003728.html">运动户外</a></li>
+                <li><a name="nav2" target="_blank" href="http://category.dangdang.com/cid4001870.html">凉鞋</a></li>
+                <li><a name="nav2" target="_blank" href="http://category.dangdang.com/cid4001829.html">箱包皮具</a></li>
+                <li><a name="nav2" target="_blank" href="http://category.dangdang.com/cid4001976.html">奶粉</a></li>
+                <li><a name="nav2" target="_blank" href="http://category.dangdang.com/cid4002074.html">美妆</a></li>
+                <li><a name="nav2" target="_blank" href="http://category.dangdang.com/cid4008009.html">生鲜</a></li>
+                <li><a name="nav2" target="_blank" href="http://category.dangdang.com/cid4002061.html">玩具童车</a></li>
+                <li><a name="nav2" target="_blank" href="http://category.dangdang.com/cid4006504.html">电子教育</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--小导航结束-->
+    <div class="bookbody clearfix">
+        <!--开学季 正青春当奋斗大图开始-->
+        <div class="school" id="school">
+            <div class="fendou contain">
+                <img src="images/yt_wzh_20170821_02.jpg" alt=""/>
+                <img src="images/192030035259458_1_o.jpg" alt=""/>
+                <div class="jiangxuejin"></div>
+            </div>
+        </div>
+        <!--开学季 正青春当奋斗大图结束-->
+
+        <!--抽奖部分开始-->
+        <div class="choujiang contain">
+            <a href="#" target="_blank"> <img src="images/choujiang.jpg" alt=""/></a>
+            <div class="showBox">
+                <div class="close"><a href="#"></a></div>
+                <div class="checkWord">
+                    <p>请点击图中所有的倒立文字</p>
+                    <img src="images/show.png" alt="" id="daolitu"/>
+                    <!--<div class="yuan"></div>-->
+                </div>
+                <div class="qdbtn"><a href="#" target="_blank">确定</a></div>
+
+            </div>
+        </div>
+        <!--抽奖部分结束-->
+
+        <!--热门头条开始-->
+        <div class="hothead contain">
+            <div class="gundongqy">
+                <ul id="hottoutiao">
+                    <li><a href="#" target="_blank">幼儿园开学攻略</a></li>
+                    <li><a href="#" target="_blank">中小学开学必备</a></li>
+                    <li><a href="#" target="_blank">开启大学生活</a></li>
+                    <li><a href="#" target="_blank">三只松鼠</a></li>
+                    <li><a href="#" target="_blank">百草味</a></li>
+                    <li><a href="#" target="_blank">当当自营零食</a></li>
+                    <li><a href="#" target="_blank">水具</a></li>
+                    <li><a href="#" target="_blank">阅读器</a></li>
+                    <li><a href="#" target="_blank">家用电器</a></li>
+                    <li><a href="#" target="_blank">学生文具</a></li>
+                    <li><a href="#" target="_blank">防晒护肤</a></li>
+                    <li><a href="#" target="_blank">宝宝护肤</a></li>
+                    <li><a href="#" target="_blank">开学新衣</a></li>
+                    <li><a href="#" target="_blank">青春女装</a></li>
+                    <li><a href="#" target="_blank">舒适内衣</a></li>
+                    <li><a href="#" target="_blank">型格男装</a></li>
+                    <li><a href="#" target="_blank">运动户外</a></li>
+                    <li><a href="#" target="_blank">童装童鞋</a></li>
+                    <li><a href="#" target="_blank">时尚鞋靴</a></li>
+                    <li><a href="#" target="_blank">百变箱包</a></li>
+                    <li><a href="#" target="_blank">珠宝手表</a></li>
+                    <li><a href="#" target="_blank">日用百货</a></li>
+                    <!-- -----------------  -->
+                    <li><a href="#" target="_blank">幼儿园开学攻略</a></li>
+                    <li><a href="#" target="_blank">中小学开学必备</a></li>
+                    <li><a href="#" target="_blank">开启大学生活</a></li>
+                    <li><a href="#" target="_blank">三只松鼠</a></li>
+                    <li><a href="#" target="_blank">百草味</a></li>
+                    <li><a href="#" target="_blank">当当自营零食</a></li>
+                    <li><a href="#" target="_blank">水具</a></li>
+                    <li><a href="#" target="_blank">阅读器</a></li>
+                    <li><a href="#" target="_blank">家用电器</a></li>
+                    <li><a href="#" target="_blank">学生文具</a></li>
+                    <li><a href="#" target="_blank">防晒护肤</a></li>
+                    <li><a href="#" target="_blank">宝宝护肤</a></li>
+                    <li><a href="#" target="_blank">开学新衣</a></li>
+                    <li><a href="#" target="_blank">青春女装</a></li>
+                    <li><a href="#" target="_blank">舒适内衣</a></li>
+                    <li><a href="#" target="_blank">型格男装</a></li>
+                    <li><a href="#" target="_blank">运动户外</a></li>
+                    <li><a href="#" target="_blank">童装童鞋</a></li>
+                    <li><a href="#" target="_blank">时尚鞋靴</a></li>
+                    <li><a href="#" target="_blank">百变箱包</a></li>
+                    <li><a href="#" target="_blank">珠宝手表</a></li>
+                    <li><a href="#" target="_blank">日用百货</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--热门头条结束-->
+        <!--楼层部分开始-->
+        <div class="bigBox contain">
+            <!--一楼部分开始-->
+            <div class="top" id="top1">
+                <div class="read">
+                    <div class="read-head">
+                        <span class="louceng">1F</span>
+                        <span class="wenzi">大众阅读</span>
+                        <a href="#" target="_blank">进入分会场> </a>
+                    </div>
+                    <div class="read-contain">
+                        <div class="daxianggou">
+                            <a href="#" target="_blank"><img src="images/170825yibanshu.jpg" alt=""/></a>
+                        </div>
+                        <div class="dazongbook">
+                            <ul>
+                                <li><a href="#" target="_blank"><img src="images/1zhuanji170825.jpg" alt=""/></a></li>
+                                <li><a href="#" target="_blank"><img src="images/2chenggogn170825.jpg" alt=""/></a></li>
+                                <li><a href="#" target="_blank"><img src="images/3qingchun170825.jpg" alt=""/></a></li>
+                                <li><a href="#" target="_blank"><img src="images/4xiaoshuo170825.jpg" alt=""/></a></li>
+                                <li><a href="#" target="_blank"><img src="images/5lishi170825.jpg" alt=""/></a></li>
+                                <li><a href="#" target="_blank"><img src="images/6zhexue170825.jpg" alt=""/></a></li>
+                                <li><a href="#" target="_blank"><img src="images/7xinlixue170825.jpg" alt=""/></a></li>
+                                <li><a href="#" target="_blank"><img src="images/8guanli170825.jpg" alt=""/></a></li>
+                                <li><a href="#" target="_blank"><img src="images/dianzishuxiaotu.jpg" alt=""/></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="buyBook">
+                        <ul>
+                            <li>
+                                <a href="#" target="_blank" title="后来时间都与你有关（当当独家专享精美海报版）"><img src="images/25105726-1_b_9.jpg" alt=""/></a>
+                                <p class="title"><a href="#" target="#" title="后来时间都与你有关（当当独家专享精美海报版）">后来时间都与你有关（当当独家专享精美海报版）</a></p>
+                                <span>¥30</span><span class="fen">.60</span>
+                                <p class="buy"><a href="#" target="_blank">购买</a></p>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank" title="遇见未知的自己（全新修订版）"><img src="images/23927251-1_b_14.jpg" alt=""/></a>
+                                <p class="title"><a href="#" target="#" title="遇见未知的自己（全新修订版）">遇见未知的自己（全新修订版）</a></p>
+                                <span>¥33</span><span class="fen">.80</span>
+                                <p class="buy"><a href="#" target="_blank">购买</a></p>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank" title="斗破苍穹全集第一辑（套装1-15册，升级典藏版，全集共30册）"><img src="images/23924582-1_b_5.jpg" alt=""/></a>
+                                <p class="title"><a href="#" target="#" title="斗破苍穹全集第一辑（套装1-15册，升级典藏版，全集共30册）">斗破苍穹全集第一辑（套装1-15册，升级典藏版，全集</a></p>
+                                <span>¥369</span><span class="fen">.70</span>
+                                <p class="buy"><a href="#" target="_blank">购买</a></p>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank" title="只有医生知道（1-3套装）（赠送@协和张羽发给天下女人的一份私信！）"><img src="images/23816455-1_b_21.jpg" alt=""/></a>
+                                <p class="title"><a href="#" target="#" title="只有医生知道（1-3套装）（赠送@协和张羽发给天下女人的一份私信！）">只有医生知道（1-3套装）（赠送协和张羽发给天下女</a></p>
+                                <span>¥55</span><span class="fen">.00</span>
+                                <p class="buy"><a href="#" target="_blank">购买</a></p>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank" title="孙俪推荐黄帝内经：徐文兵、梁冬对话《黄帝内经》"><img src="images/23504901-1_b_10.jpg" alt=""/></a>
+                                <p class="title"><a href="#" target="#" title="孙俪推荐黄帝内经：徐文兵、梁冬对话《黄帝内经》">孙俪推荐黄帝内经：徐文兵、梁冬对话《黄帝内经》</a></p>
+                                <span>¥160</span><span class="fen">.60</span>
+                                <p class="buy"><a href="#" target="_blank">购买</a></p>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank" title="故宫日历2018 中文版"><img src="images/25140788-1_b_4.jpg" alt=""/></a>
+                                <p class="title"><a href="#" target="#" title="故宫日历2018 中文版">故宫日历2018 中文版</a></p>
+                                <span>¥47</span><span class="fen">.90</span>
+                                <p class="buy"><a href="#" target="_blank">购买</a></p>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank" title="世界文明史（全11卷，共15册）（精装修订版）罗辑思维创始人罗振宇倾情推荐，人生大格局的家庭必藏书！高大上全新修订版，全景再现文明史"><img src="images/25106534-1_b_7.jpg" alt=""/></a>
+                                <p class="title"><a href="#" target="#" title="世界文明史（全11卷，共15册）（精装修订版）罗辑思维创始人罗振宇倾情推荐，人生大格局的家庭必藏书！高大上全新修订版，全景再现文明史">世界文明史（全11卷，共15册）（精装修订版）罗辑思</a></p>
+                                <span>¥941</span><span class="fen">.50</span>
+                                <p class="buy"><a href="#" target="_blank">购买</a></p>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"  title="美的历程（李泽厚代表名作）"><img src="images/23445574-1_b_3.jpg" alt=""/></a>
+                                <p class="title"><a href="#" target="#" title="美的历程（李泽厚代表名作）">美的历程（李泽厚代表名作）</a></p>
+                                <span>¥35</span><span class="fen">.30</span>
+                                <p class="buy"><a href="#" target="_blank">购买</a></p>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank" title="阿米巴经营——畅销十周年纪念版，当当全国独家（团购，请致电010-57993149）"><img src="images/23932960-1_b_16.jpg" alt=""/></a>
+                                <p class="title"><a href="#" target="#" title="阿米巴经营——畅销十周年纪念版，当当全国独家（团购，请致电010-57993149）">阿米巴经营——畅销十周年纪念版，当当全国独家（团</a></p>
+                                <span>¥27</span><span class="fen">.30</span>
+                                <p class="buy"><a href="#" target="_blank">购买</a></p>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank" title="what if那些古怪又让人忧心的问题（珍藏版）"><img src="images/23964234-1_b_12.jpg" alt=""/></a>
+                                <p class="title"><a href="#" target="#" title="what if那些古怪又让人忧心的问题（珍藏版）">what if那些古怪又让人忧心的问题（珍藏版）</a></p>
+                                <span>¥45</span><span class="fen">.80</span>
+                                <p class="buy"><a href="#" target="_blank">购买</a></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--一楼部分结束-->
+
+            <!--二楼部分开始-->
+            <div class="top"id="top2">
+                <div class="read">
+                    <div class="read-head">
+                        <span class="louceng">2F</span>
+                        <span class="wenzi">教辅童书 </span>
+                        <a href="#" target="_blank">进入童书分会场> </a>
+                        <a href="#" target="_blank">进入教辅分会场> </a>
+                    </div>
+                    <div class="read-contain">
+                        <div class="daxianggou">
+                            <img src="images/765x366_djj_0901we.jpg" alt=""/>
+                            <a href="#" target="_blank" id="left-button"></a>
+                            <a href="#" target="_blank" id="right-button"></a>
+                        </div>
+                        <div class="dazongbook">
+                            <ul>
+                                <li><a href="#" target="_blank"><img src="images/1zhognxiaoxue170825.jpg" alt=""/></a></li>
+                                <li><a href="#" target="_blank"><img src="images/2gognjushu170825.jpg" alt=""/></a></li>
+                                <li><a href="#" target="_blank"><img src="images/3yuwen170825.jpg" alt=""/></a></li>
+                                <li><a href="#" target="_blank"><img src="images/4gaokao170825.jpg" alt=""/></a></li>
+                                <li><a href="#" target="_blank"><img src="images/5youery170825.jpg" alt=""/></a></li>
+                                <li><a href="#" target="_blank"><img src="images/6xiaoxue12170825.jpg" alt=""/></a></li>
+                                <li><a href="#" target="_blank"><img src="images/7xiaoxue34170825.jpg" alt=""/></a></li>
+                                <li><a href="#" target="_blank"><img src="images/8xiaoxue170825.jpg" alt=""/></a></li>
+                                <li><a href="#" target="_blank"><img src="images/9zhognxiaox170825.jpg" alt=""/></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="buyBook">
+                        <ul>
+                            <li>
+                                <a href="#" target="_blank" title="四大名著 新课标必读 33000多名读者热评"><img src="images/23356962-1_b_19.jpg" alt=""/></a>
+                                <p class="title"><a href="#" target="#" title="四大名著 新课标必读 33000多名读者热评">四大名著 新课标必读 33000多名读者热评</a></p>
+                                <span>¥30</span><span class="fen">.60</span>
+                                <p class="buy"><a href="#" target="_blank">购买</a></p>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank" title="小学生小古文100课（上下） 修订版赠光盘  33000多名读者热评！"><img src="images/23736076-1_b_8.jpg" alt=""/></a>
+                                <p class="title"><a href="#" target="#" title="小学生小古文100课（上下） 修订版赠光盘  33000多名读者热评！">小学生小古文100课（上下） 修订版赠光盘  33000多</a></p>
+                                <span>¥33</span><span class="fen">.80</span>
+                                <p class="buy"><a href="#" target="_blank">购买</a></p>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank" title="亲近母语：小学五年级-全四册-含日有所诵（第五版）、全阅读、阅读力测试、我的写作课"><img src="images/410259130-1_b_1.jpg" alt=""/></a>
+                                <p class="title"><a href="#" target="#" title="亲近母语：小学五年级-全四册-含日有所诵（第五版）、全阅读、阅读力测试、我的写作课">亲近母语：小学五年级-全四册-含日有所诵（第五版）</a></p>
+                                <span>¥50</span><span class="fen">.04</span>
+                                <p class="buy"><a href="#" target="_blank">购买</a></p>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank" title="唐诗三百首 小学生 成长必读 绘本 注音版"><img src="images/23993774-1_b_6.jpg" alt=""/></a>
+                                <p class="title"><a href="#" target="#" title="唐诗三百首 小学生 成长必读 绘本 注音版">唐诗三百首 小学生 成长必读 绘本 注音版</a></p>
+                                <span>¥22</span><span class="fen">.00</span>
+                                <p class="buy"><a href="#" target="_blank">购买</a></p>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank" title="朝花夕拾（新课标）万条五星级热评，此版本图书当当网销量遥遥领先！"><img src="images/23643238-1_b_1.jpg" alt=""/></a>
+                                <p class="title"><a href="#" target="#" title="朝花夕拾（新课标）万条五星级热评，此版本图书当当网销量遥遥领先！">朝花夕拾（新课标）万条五星级热评，此版本图书当当</a></p>
+                                <span>¥13</span><span class="fen">.50</span>
+                                <p class="buy"><a href="#" target="_blank">购买</a></p>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank" title="写给儿童的中国地理（全14册）"><img src="images/24044343-1_b_6.jpg" alt=""/></a>
+                                <p class="title"><a href="#" target="#" title="写给儿童的中国地理（全14册）">写给儿童的中国地理（全14册）</a></p>
+                                <span>¥316</span><span class="fen">.70</span>
+                                <p class="buy"><a href="#" target="_blank">购买</a></p>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank" title="暖暖心绘本（全四辑19本）"><img src="images/20812025-1_b_3.jpg" alt=""/></a>
+                                <p class="title"><a href="#" target="#" title="暖暖心绘本（全四辑19本）">暖暖心绘本（全四辑19本）</a></p>
+                                <span>¥144</span><span class="fen">.60</span>
+                                <p class="buy"><a href="#" target="_blank">购买</a></p>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"  title="曹文轩文集典藏版（全7册）"><img src="images/23323691-1_b_2.jpg" alt=""/></a>
+                                <p class="title"><a href="#" target="#" title="曹文轩文集典藏版（全7册）">曹文轩文集典藏版（全7册）</a></p>
+                                <span>¥145</span><span class="fen">.30</span>
+                                <p class="buy"><a href="#" target="_blank">购买</a></p>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank" title="玛格丽特晚安诗（全2册）双语绘本 经典诗歌"><img src="images/24236833-1_b_3.jpg" alt=""/></a>
+                                <p class="title"><a href="#" target="#" title="玛格丽特晚安诗（全2册）双语绘本 经典诗歌">玛格丽特晚安诗（全2册）双语绘本 经典诗歌</a></p>
+                                <span>¥83</span><span class="fen">.40</span>
+                                <p class="buy"><a href="#" target="_blank">购买</a></p>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank" title="男孩的冒险书（少儿绘图版，全三册）"><img src="images/24104216-1_b_12.jpg" alt=""/></a>
+                                <p class="title"><a href="#" target="#" title=男孩的冒险书（少儿绘图版，全三册）">男孩的冒险书（少儿绘图版，全三册）</a></p>
+                                <span>¥144</span><span class="fen">.70</span>
+                                <p class="buy"><a href="#" target="_blank">购买</a></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--二楼部分结束-->
+
+            <!--三楼部分开始-->
+            <div class="top" id="top3">
+                <div class="read">
+                    <div class="read-head">
+                        <span class="louceng">3F</span>
+                        <span class="wenzi">外语考试 </span>
+                        <a href="#" target="_blank">进入考试分会场> </a>
+                        <a href="#" target="_blank">进入外语分会场> </a>
+                    </div>
+                    <div class="read-contain">
+                        <div class="daxianggou">
+                            <a href="#" target="_blank"><img src="images/170825waiyu.jpg" alt=""/></a>
+                        </div>
+                        <div class="dazongbook">
+                            <ul>
+                                <li><a href="#" target="_blank"><img src="images/1kaoyan170825.jpg" alt=""/></a></li>
+                                <li><a href="#" target="_blank"><img src="images/2gongwuyuan170825.jpg" alt=""/></a></li>
+                                <li><a href="#" target="_blank"><img src="images/3caishui170825.jpg" alt=""/></a></li>
+                                <li><a href="#" target="_blank"><img src="images/4jiaoshi170825.jpg" alt=""/></a></li>
+                                <li><a href="#" target="_blank"><img src="images/5yingyu170825.jpg" alt=""/></a></li>
+                                <li><a href="#" target="_blank"><img src="images/6shuangyu170825.jpg" alt=""/></a></li>
+                                <li><a href="#" target="_blank"><img src="images/7riyu170825.jpg" alt=""/></a></li>
+                                <li><a href="#" target="_blank"><img src="images/8shegnhuo170825.jpg" alt=""/></a></li>
+                                <li><a href="#" target="_blank"><img src="images/9yignyu170825.jpg" alt=""/></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="buyBook">
+                        <ul>
+                            <li>
+                                <a href="#" target="_blank" title="2017.12新题型笔试+口试 听力强化版星火四级 大学英语四级真题 四级考试 星火英语 艾考黑旋风四级试卷 真题详解+标准预测（4级）团购电话：010-57993483   010-57993149"><img src="images/25099284-1_b_3.jpg" alt=""/></a>
+                                <p class="title"><a href="#" target="#" title="2017.12新题型笔试+口试 听力强化版星火四级 大学英语四级真题 四级考试 星火英语 艾考黑旋风四级试卷 真题详解+标准预测（4级）团购电话：010-57993483   010-57993149">2017.12新题型笔试+口试 听力强化版星火四级 大学英</a></p>
+                                <span>¥30</span><span class="fen">.60</span>
+                                <p class="buy"><a href="#" target="_blank">购买</a></p>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank" title="英语六级真题集训 2017.12新题型 笔试+口语试卷 华研外语"><img src="images/25111269-1_b_3.jpg" alt=""/></a>
+                                <p class="title"><a href="#" target="#" title="英语六级真题集训 2017.12新题型 笔试+口语试卷 华研外语">英语六级真题集训 2017.12新题型 笔试+口语试卷 华</a></p>
+                                <span>¥33</span><span class="fen">.80</span>
+                                <p class="buy"><a href="#" target="_blank">购买</a></p>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank" title="了不起的盖茨比 软精装 珍藏版（买中文版送英文版）"><img src="images/23350487-1_b_2.jpg" alt=""/></a>
+                                <p class="title"><a href="#" target="#" title="了不起的盖茨比 软精装 珍藏版（买中文版送英文版）">了不起的盖茨比 软精装 珍藏版（买中文版送英文版）</a></p>
+                                <span>¥369</span><span class="fen">.70</span>
+                                <p class="buy"><a href="#" target="_blank">购买</a></p>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank" title="雅思口语全薇机经   “雅思天后”刘薇2017年最新力作，最新、最全官方题库汇总，全考官团队审核超经典答案"><img src="images/24176142-1_b_6.jpg" alt=""/></a>
+                                <p class="title"><a href="#" target="#" title="雅思口语全薇机经   “雅思天后”刘薇2017年最新力作，最新、最全官方题库汇总，全考官团队审核超经典答案">雅思口语全薇机经   “雅思天后”刘薇2017年最新力</a></p>
+                                <span>¥55</span><span class="fen">.00</span>
+                                <p class="buy"><a href="#" target="_blank">购买</a></p>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank" title="旅游英语口语：大家的旅行英语入门学习书，图解一看就会"><img src="images/23494140-1_b_7.jpg" alt=""/></a>
+                                <p class="title"><a href="#" target="#" title="旅游英语口语：大家的旅行英语入门学习书，图解一看就会">旅游英语口语：大家的旅行英语入门学习书，图解一看</a></p>
+                                <span>¥160</span><span class="fen">.60</span>
+                                <p class="buy"><a href="#" target="_blank">购买</a></p>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank" title="金榜图书.2018李永乐考研数学线性代数辅导讲义"><img src="images/24188194-1_b_5.jpg" alt=""/></a>
+                                <p class="title"><a href="#" target="#" title="金榜图书.2018李永乐考研数学线性代数辅导讲义">金榜图书.2018李永乐考研数学线性代数辅导讲义</a></p>
+                                <span>¥47</span><span class="fen">.90</span>
+                                <p class="buy"><a href="#" target="_blank">购买</a></p>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank" title="文都教育 蒋中挺 2018考研思想政治理论复习全书"><img src="images/24193194-1_b_3.jpg" alt=""/></a>
+                                <p class="title"><a href="#" target="#" title="文都教育 蒋中挺 2018考研思想政治理论复习全书">文都教育 蒋中挺 2018考研思想政治理论复习全书</a></p>
+                                <span>¥941</span><span class="fen">.50</span>
+                                <p class="buy"><a href="#" target="_blank">购买</a></p>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"  title="2018疯狂考研英语系列丛书之 不就是语法和长难句吗？"><img src="images/24228991-1_b_3.jpg" alt=""/></a>
+                                <p class="title"><a href="#" target="#" title="2018疯狂考研英语系列丛书之 不就是语法和长难句吗？）">2018疯狂考研英语系列丛书之 不就是语法和长难句吗</a></p>
+                                <span>¥35</span><span class="fen">.30</span>
+                                <p class="buy"><a href="#" target="_blank">购买</a></p>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank" title="（2017）证券从业人员一般从业资格考试标准教材与真题题库：证券市场基本法律+金融市场基础知识（套装共4册）"><img src="images/23800068-1_b_16.jpg" alt=""/></a>
+                                <p class="title"><a href="#" target="#" title="（2017）证券从业人员一般从业资格考试标准教材与真题题库：证券市场基本法律+金融市场基础知识（套装共4册）">（2017）证券从业人员一般从业资格考试标准教材与真</a></p>
+                                <span>¥27</span><span class="fen">.30</span>
+                                <p class="buy"><a href="#" target="_blank">购买</a></p>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank" title="司法考试2017 2017年司法考试指南针历年真题解析：柏浪涛刑法真题攻略"><img src="images/24174362-1_b_3.jpg" alt=""/></a>
+                                <p class="title"><a href="#" target="#" title="司法考试2017 2017年司法考试指南针历年真题解析：柏浪涛刑法真题攻略">司法考试2017 2017年司法考试指南针历年真题解析：</a></p>
+                                <span>¥45</span><span class="fen">.80</span>
+                                <p class="buy"><a href="#" target="_blank">购买</a></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--三楼部分结束-->
+
+            <!--四楼部分开始-->
+            <div class="top" id="top4">
+                <div class="read">
+                    <div class="read-head">
+                        <span class="louceng">4F</span>
+                        <span class="wenzi">文具书包</span>
+                        <a href="#" target="_blank">进入分会场> </a>
+                    </div>
+                    <div class="read-contain">
+                        <div class="daxianggou">
+                            <a href="#" target="_blank"><img src="images/666666666.jpg" alt=""/></a>
+                        </div>
+                        <div class="dazongbook">
+                            <ul>
+                                <li><a href="#" target="_blank"><img src="images/17597.jpg" alt=""/></a></li>
+                                <li><a href="#" target="_blank"><img src="images/1116779.jpg" alt=""/></a></li>
+                                <li><a href="#" target="_blank"><img src="images/20093.jpg" alt=""/></a></li>
+                                <li><a href="#" target="_blank"><img src="images/17349.jpg" alt=""/></a></li>
+                                <li><a href="#" target="_blank"><img src="images/hello.jpg" alt=""/></a></li>
+                                <li><a href="#" target="_blank"><img src="images/dsn.jpg" alt=""/></a></li>
+                                <li><a href="#" target="_blank"><img src="images/languo.jpg" alt=""/></a></li>
+                                <li><a href="#" target="_blank"><img src="images/baile.jpg" alt=""/></a></li>
+                                <li><a href="#" target="_blank"><img src="images/16767.jpg" alt=""/></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="shop">
+                        <ul>
+                            <li>
+                                <a href="#" target="_blank" ><img src="images/PC230x350.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/20303-PC230x350.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank" ><img src="images/PC230x35017349.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/PC-230x350.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank" ><img src="images/19828-PC230x350-ok.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/2222.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank" ><img src="images/xinxieqiPC.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/ZIYINGpc.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank" ><img src="images/205100029565758_y.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/201830035165350_y.jpg" alt=""/></a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--四楼部分结束-->
+
+            <!--五楼部分开始-->
+            <div class="top"id="top5">
+                <div class="read">
+                    <div class="read-head">
+                        <span class="louceng">5F</span>
+                        <span class="wenzi">服装</span>
+                        <a href="#" target="_blank">进入分会场> </a>
+                    </div>
+                    <div class="read-contain">
+                        <div class="daxianggou">
+                            <a href="#" target="_blank"><img src="images/louceng.jpg" alt=""/></a>
+                        </div>
+                        <div class="dazongbook">
+                            <ul>
+                                <li><a href="#" target="_blank"><img src="images/xinyi.jpg" alt=""/></a></li>
+                                <li><a href="#" target="_blank"><img src="images/nvzhuang.jpg" alt=""/></a></li>
+                                <li><a href="#" target="_blank"><img src="images/meihuo-meiyi.jpg" alt=""/></a></li>
+                                <li><a href="#" target="_blank"><img src="images/nanzhuang.jpg" alt=""/></a></li>
+                                <li><a href="#" target="_blank"><img src="images/yundong.jpg" alt=""/></a></li>
+                                <li><a href="#" target="_blank"><img src="images/tongzhuang.jpg" alt=""/></a></li>
+                                <li><a href="#" target="_blank"><img src="images/xiexue.jpg" alt=""/></a></li>
+                                <li><a href="#" target="_blank"><img src="images/baibian.jpg" alt=""/></a></li>
+                                <li><a href="#" target="_blank"><img src="images/zhubao.jpg" alt=""/></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="shop" id="yifushop">
+                        <ul>
+                            <li>
+                                <a href="#" target="_blank" ><img src="images/86030035123091_y.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/93730035168327_y.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank" ><img src="images/180250024726176_y.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/107480036697698_y.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank" ><img src="images/183600029558344_y.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/167630035121095_y.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank" ><img src="images/198130035120469_y.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/165600029582170_y.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank" ><img src="images/18249-230x350.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/230x350-19734.jpg" alt=""/></a>
+                            </li>
+
+                            <li>
+                                <a href="#" target="_blank" ><img src="images/78340027807995_y.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/99570031635590_y.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/11184-230x350.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/10194-230x350.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/91760048218639_y.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/91540027807725_y.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/12909-230x350.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/3957-230x350-2.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/77330035120571_y.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/80640027807974_y.jpg" alt=""/></a>
+                            </li>
+
+                            <li>
+                                <a href="#" target="_blank" ><img src="images/188750024567639_y.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/205100029565703_y.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/205100029565693_y.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/53840027920577_y.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/2017082211065110.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/2017082211141812.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/2017082210592013.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/2017082116202924.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/2017082115461417.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/201708231438337.jpg" alt=""/></a>
+                            </li>
+
+
+                            <li>
+                                <a href="#" target="_blank" ><img src="images/2017082214555521.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/ChEi1Fmc7IeAQOy9AAC8Jr_rlsQ69400.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/pcdhsoanan.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/99999990001807658.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/193180036644964_y.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/2017082114560711.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/201708211413265.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/201708211518389.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/2017082311300611.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/ertongshoubiao-PC.jpg" alt=""/></a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--五楼部分结束-->
+
+            <!--六楼部分开始-->
+            <div class="top"id="top6">
+                <div class="read">
+                    <div class="read-head">
+                        <span class="louceng">6F</span>
+                        <span class="wenzi">百货</span>
+                        <a href="#" target="_blank">进入分会场> </a>
+                    </div>
+                    <div class="read-contain">
+                        <div class="daxianggou">
+                            <a href="#" target="_blank"><img src="images/192030035169932_y.jpg" alt=""/></a>
+                        </div>
+                        <div class="dazongbook">
+                            <ul>
+                                <li><a href="#" target="_blank"><img src="images/192030035169933_y.jpg" alt=""/></a></li>
+                                <li><a href="#" target="_blank"><img src="images/192030035169934_y.jpg" alt=""/></a></li>
+                                <li><a href="#" target="_blank"><img src="images/192030035169935_y.jpg" alt=""/></a></li>
+                                <li><a href="#" target="_blank"><img src="images/192030035169936_y.jpg" alt=""/></a></li>
+                                <li><a href="#" target="_blank"><img src="images/192030035169938_y.jpg" alt=""/></a></li>
+                                <li><a href="#" target="_blank"><img src="images/192030035169939_y.jpg" alt=""/></a></li>
+                                <li><a href="#" target="_blank"><img src="images/192030035169940_y.jpg" alt=""/></a></li>
+                                <li><a href="#" target="_blank"><img src="images/192030035258595_y.jpg" alt=""/></a></li>
+                                <li><a href="#" target="_blank"><img src="images/192030035169942_y.jpg" alt=""/></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="shop" id="baihuoshop">
+                        <ul>
+                            <li>
+                                <a href="#" target="_blank" ><img src="images/84110022961934_y.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/PC-zyzh.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank" ><img src="images/PC-bcw.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/PC-xs.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank" ><img src="images/pc-jk.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/PC-old.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank" ><img src="images/pc-ct.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/PC-gh.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank" ><img src="images/115250024693830_y.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/85420032894275_y.jpg" alt=""/></a>
+                            </li>
+
+                            <li>
+                                <a href="#" target="_blank" ><img src="images/109180036597827_y.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/85170031642504_y.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/196010022892296_y.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/178810022899842_y.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/158060048312477_y.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/PC-230x350-jjry822.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/PC-230x350-jj822.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/pcjj2.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/174040027858384_y.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/pcqc2.jpg" alt=""/></a>
+                            </li>
+
+                            <li>
+                                <a href="#" target="_blank" ><img src="images/830-dianjiao-pc.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/182190032529083_y.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/0830-shuma-pc.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/155370031737882_y.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/179910022925239_y.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/pc-cf1-170824-zw04.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/196800029575678_y.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/pc-sh01-170824-zw04.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/830wj-pc-lego.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/146170031629907_y.jpg" alt=""/></a>
+                            </li>
+
+
+                            <li>
+                                <a href="#" target="_blank" ><img src="images/9001890032540089.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/75470031625816_y.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/PC-1-8-22.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/14540027836639_y.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/PC-5zhe.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/14540027856254_y.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/PC-230x350-haoqi.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/PC-230-350-qc.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/PC-230x350-beiqin.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/kxj830-pc.jpg" alt=""/></a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--六楼部分结束-->
+
+            <!--七楼部分开始-->
+            <div class="top" id="top7">
+                <div class="read">
+                    <div class="read-head">
+                        <span class="louceng">7F</span>
+                        <span class="wenzi">自有品牌</span>
+                        <a href="#" target="_blank">进入分会场> </a>
+                    </div>
+                    <div class="read-contain">
+                        <div class="daxianggou">
+                            <a href="#" target="_blank"><img src="images/99999990001823740.jpg" alt=""/></a>
+                        </div>
+                        <div class="dazongbook">
+                            <ul>
+                                <li><a href="#" target="_blank"><img src="images/xiaotu2.jpg" alt=""/></a></li>
+                                <li><a href="#" target="_blank"><img src="images/xiaotu1.jpg" alt=""/></a></li>
+                                <li><a href="#" target="_blank"><img src="images/0830-y-p-gjz-3.jpg" alt=""/></a></li>
+                                <li><a href="#" target="_blank"><img src="images/0830-y-p-gjz-4.jpg" alt=""/></a></li>
+                                <li><a href="#" target="_blank"><img src="images/99999990001823701.jpg" alt=""/></a></li>
+                                <li><a href="#" target="_blank"><img src="images/bkx-gjc-0825.jpg" alt=""/></a></li>
+                                <li><a href="#" target="_blank"><img src="images/0830kxj-bmrj-fl.jpg" alt=""/></a></li>
+                                <li><a href="#" target="_blank"><img src="images/xiaotuy8.25.jpg" alt=""/></a></li>
+                                <li><a href="#" target="_blank"><img src="images/zhonghuatechan.jpg" alt=""/></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="shop">
+                        <ul>
+                            <li>
+                                <a href="#" target="_blank" ><img src="images/PC-jf-230x350.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/PC-RUJ-230x350.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank" ><img src="images/99999990001823714.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/99999990001823715.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank" ><img src="images/99999990001807658.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/bkx-pc-230-350-0824.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank" ><img src="images/0830kxj-pc-bmrj-230x350.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/shanshengPCkx-230x350.jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank" ><img src="images/PC230x350(1).jpg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/PC230x350(2).jpg" alt=""/></a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--七楼部分结束-->
+
+            <!--文字部分开始-->
+            <div class="hdword">
+                活动说明：<br/>
+                1、活动时间：8月30日-9月5日<br/>
+                2、专区内商品每满200减100，多买多减，上不封顶。<br/>
+                3、请以商品详情页面，促销信息为准。<br/>
+                4、部分商品有限购数量，见商品详情页提示。<br/>
+                5、使用礼券订单可参与活动，但礼券不能冲抵运费。<br/>
+                6、因缺货导致的不满额，按商品金额比例享受优惠，购买享受优惠的商品，发生缺货时，则不再补发。<br/>
+                温馨提示：满额减/礼券活动不支持团购，同时由顾客行为形成的团购（批量购买商品）并使用礼券支付，当当有权取消该类订单（凡是账户ID、IP、收货地址、联系方式、联系人、收货人等只要有一项相同的订单，均默认为同一顾客的订单）。<br/>
+            </div>
+            <!--文字部分结束-->
+
+        </div>
+        <!--楼层部分结束-->
+
+        <!--左侧主会场部分-->
+        <div id="zhuhuichang">
+            <div id="sidebar-mainleft">
+                <p><a href="#" target="_blank">主会场</a></p>
+                <dl class="clearfix">
+                    <dt><a href="#" target="_blank">图书</a></dt>
+                    <dd><a href="#" target="_blank">文艺</a></dd>
+                    <dd><a href="#" target="_blank">童书</a></dd>
+                    <dd><a href="#" target="_blank">中小学教辅</a></dd>
+                    <dd><a href="#" target="_blank">外语</a></dd>
+                    <dd><a href="#" target="_blank">人文社科</a></dd>
+                    <dd><a href="#" target="_blank">小说</a></dd>
+                    <dd><a href="#" target="_blank">成功励志</a></dd>
+                    <dd><a href="#" target="_blank">生活</a></dd>
+                    <dd><a href="#" target="_blank">经济管理</a></dd>
+                    <dd><a href="#" target="_blank">传记</a></dd>
+                    <dd><a href="#" target="_blank">科技</a></dd>
+                    <dd><a href="#" target="_blank">考试</a></dd>
+                    <dd><a href="#" target="_blank">名店好书</a></dd>
+                </dl>
+                <p class="pbj"><a href="#" target="_blank">电子书</a></p>
+                <dl class="clearfix">
+                    <dt><a href="#" target="_blank">书包文具</a></dt>
+                    <dd><a href="#" target="_blank">学生文具</a></dd>
+                    <dd><a href="#" target="_blank">学习用品</a></dd>
+                </dl>
+
+                <dl class="clearfix">
+                    <dt><a href="#" target="_blank">服装</a></dt>
+                    <dd><a href="#" target="_blank">童装童鞋</a></dd>
+                    <dd><a href="#" target="_blank">运动户外</a></dd>
+                    <dd><a href="#" target="_blank">箱包书包</a></dd>
+                    <dd><a href="#" target="_blank">青春女装</a></dd>
+                    <dd><a href="#" target="_blank">内衣配饰</a></dd>
+                    <dd><a href="#" target="_blank">潮流男装</a></dd>
+                    <dd><a href="#" target="_blank">时尚鞋靴</a></dd>
+                    <dd><a href="#" target="_blank">珠宝手表</a></dd>
+                </dl>
+
+                <dl class="clearfix">
+                    <dt><a href="#" target="_blank">百货会场</a></dt>
+                    <dd><a href="#" target="_blank">食品</a></dd>
+                    <dd><a href="#" target="_blank">家居用品</a></dd>
+                    <dd><a href="#" target="_blank">数码3C</a></dd>
+                    <dd><a href="#" target="_blank">家电</a></dd>
+                    <dd><a href="#" target="_blank">玩具招自</a></dd>
+                    <dd><a href="#" target="_blank">美妆</a></dd>
+                </dl>
+                <p class="pbj"><a href="#" target="_blank">当当优选</a></p>
+
+            </div>
+            <div id="sidebar-left">
+                <p>开学季分会场</p>
+                <span id="udbutton">展开</span><i id="jiantou">></i>
+                <!--左侧主会场部分-->
+            </div>
+        </div>
+
+
+        <!--右侧楼层跳转部分-->
+        <div id="sidebar-right">
+            <img src="images/192030035259161_y.jpg" alt=""/>
+            <a href="#top1"></a>
+            <a href="#top2"></a>
+            <a href="#top3"></a>
+            <a href="#top4"></a>
+            <a href="#top5"></a>
+            <a href="#top6"></a>
+            <a href="#top7"></a>
+            <a href="#school" id="top"></a>
+        </div>
+        <!--右侧楼层跳转部分-->
+    </div>
+    <!--尾部开始-->
+    <div class="foot">
+        <div class="foot-top">
+            <div class="foot-top1"></div>
+            <div class="foot-top2"></div>
+            <div class="foot-top3"></div>
+            <div class="foot-top4"></div>
+        </div>
+        <div class="foot-center">
+            <dl class="dl1 mmm">
+                <dt>购物指南</dt>
+                <dd><a href="#">购物流程</a></dd>
+                <dd><a href="#">发票制度</a></dd>
+                <dd><a href="#">账户管理</a></dd>
+                <dd><a href="#">会员优惠</a></dd>
+            </dl>
+            <dl class="dl1">
+                <dt>支付方式</dt>
+                <dd><a href="#">货到付款</a></dd>
+                <dd><a href="#">网上支付</a></dd>
+                <dd><a href="#">礼品卡支付</a></dd>
+                <dd><a href="#">银行转账</a></dd>
+            </dl>
+            <dl class="dl1">
+                <dt>订单服务</dt>
+                <dd><a href="#">订单配送查询</a></dd>
+                <dd><a href="#">订单状态说明</a></dd>
+                <dd><a href="#">自动取消订单</a></dd>
+                <dd><a href="#">自动修改订单</a></dd>
+            </dl>
+            <dl class="dl1">
+                <dt>配送方式</dt>
+                <dd><a href="#">配送范围及免邮标准</a></dd>
+                <dd><a href="#">当日递/次日达</a></dd>
+                <dd><a href="#">订单自提</a></dd>
+                <dd><a href="#">验货与签收</a></dd>
+            </dl>
+            <dl class="dl1">
+                <dt>退换货</dt>
+                <dd><a href="#">退换货政策</a></dd>
+                <dd><a href="#">自助申请退换货</a></dd>
+                <dd><a href="#">退换货进度查询</a></dd>
+                <dd><a href="#">退款方式和时间</a></dd>
+            </dl>
+            <dl class="dl1">
+                <dt>商家服务</dt>
+                <dd><a href="#">商家中心</a></dd>
+                <dd><a href="#">运营服务</a></dd>
+                <dd><a href="#">加入尾品汇</a></dd>
+            </dl>
+
+        </div>
+        <div class="foot-botton contain">
+
+            <ul class="clearfix">
+                <li><a href="#">公司简介</a><span>丨</span></li>
+                <li><a href="#">诚聘英才</a><span>丨</span></li>
+                <li><a href="#">网站联盟</a><span>丨</span></li>
+                <li><a href="#">当当招商</a><span>丨</span></li>
+                <li><a href="#">机构销售</a><span>丨</span></li>
+                <li><a href="#">手机当当</a><span>丨</span></li>
+                <li><a href="#">官方Blog</a><span>丨</span></li>
+                <li><a href="#">热词搜索</a><span></span></li>
+            </ul>
+
+            <p>Copyright (C) 当当网 2004-2017, All Rights Reserved</p>
+            <img src="images/validate.gif" alt=""/>
+            <p><a href="#">京ICP证041189号</a> 出版物经营许可证 新出发京批字第直0673号</p>
+        </div>
+    </div>
+    <!--尾部结束-->
+</body>
+</html>

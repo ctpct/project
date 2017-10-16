@@ -1,0 +1,699 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: #707070;
+}
+span {
+    display: block;
+}
+li {
+    list-style: none;
+}
+.centre {
+    margin: 0 auto;
+    width: 1200px;
+}
+/*导航栏*/
+/*-----------------------*/
+
+
+
+
+
+
+
+/*顶部部分开始*/
+
+.top {
+    height: 35px;
+    background-color: #f9f9f9;
+    position: relative;
+}
+#add {
+    margin-left: 84px;
+    width: 70px;
+    height: 30px;
+    font-size: 12px;
+    color: #646464;
+    line-height: 30px;
+    background: url("../miao.dangdang.com/images/28.png") no-repeat -3px -303px;
+    padding: 0 10px;
+    float: left;
+}
+#add a {
+    color: #646464;
+}
+.add-pre {
+    position: fixed;
+    width: 300px;
+    height: 210px;
+    margin-left: 84px;
+    margin-top: 25px;
+    display: none;
+    z-index: 999;
+}
+.add-pre li {
+    float: left;
+    width: 60px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    color: #646464;
+}
+.add-pre li a:hover{
+    color: red;
+}
+.top p {
+    float: left;
+    font-size: 12px;
+    color:#646464;
+    margin-left: 380px;
+    height: 30px;
+    line-height: 30px;
+}
+.p-a {
+    color:red;
+}
+.top .ul2 {
+    float: right;
+    margin-right: 94px;
+    font-size: 12px;
+}
+.top .ul2>li {
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    padding-right: 3px;
+
+}
+.ul2 #red0 {
+    color:red;
+    font-weight: 700;
+}
+.top .ul2>li span {
+    display: inline-block;
+    color:#ddd;
+    padding-left: 3px;
+}
+.ul2 .jingling1 {
+    cursor: pointer;
+    width: 17px;
+    height: 17px;
+    position: relative;
+    left: -20px;
+    top: -24px;
+    background: url("../miao.dangdang.com/images/37.png") no-repeat -40px -85px;
+}
+.ul2 .jingling{
+    width: 8px;
+    height: 4px;
+    position: relative;
+    left: 50px;
+    top: -16px;
+    background: url("../miao.dangdang.com/images/28.png") no-repeat -73px -316px;
+}
+.ul3 {
+    margin-top: -10px;
+    position: absolute;
+    right: 288px;
+    top: 34px;
+    border: 1px solid #ccc;
+    display: none;
+    z-index: 9999000000;
+    width: 70px;
+    height: 130px;
+    background-color: white;
+}
+.ul3 li:hover {
+    background-color: #efefef;
+}
+.ul4 {
+    margin-top: -10px;
+    position: absolute;
+    right: 153px;
+    top: 34px;
+    border: 1px solid #ccc;
+    display: none;
+    z-index: 9999000000;
+    width: 70px;
+    height: 130px;
+    background-color: white;
+}
+.ul4 li:hover {
+    background-color: #efefef;
+}
+.ul5 {
+    margin-top: -10px;
+    position: absolute;
+    right: 81px;
+    top: 34px;
+    border: 1px solid #ccc;
+    display: none;
+    z-index: 9999000000;
+    width: 70px;
+    height: 130px;
+    background-color: white;
+}
+.ul5 li:hover {
+    background-color: #efefef;
+}
+.ul3 li,.ul4 li,.ul5 li{
+    height: 25px;
+    line-height: 25px;
+    font-size: 12px;
+    color:#646464;
+    padding-left: 5px;
+}
+
+/*顶部部分结束*/
+
+
+
+
+
+
+
+/*-----------------------*/
+
+
+
+
+
+/*秒杀栏*/
+
+
+.miaosha-nav {
+    height: 95px;
+    background-color: #ffd800;
+    width: 100%;
+}
+.miaosha-l img {
+    width: 190px;
+    height: 55px;
+    margin-top: 20px;
+    float: left;
+}
+.miaosha-nav .miaosha-l span {
+    font-size: 18px;
+    font-weight: 700;
+    color: #333333;
+    font-family: arial, simsun;
+    float: left;
+    margin: 40px 0 0 10px;
+}
+.miaosha-r {
+    margin-top: 26px;
+    float: right;
+}
+.miaosha-r span {
+    font-size: 18px;
+    font-family: 微软雅黑;
+    font-weight: 100;
+    color: #333333;
+    float: right;
+    margin: 15px 0 0 10px;
+}
+
+
+/*背景图*/
+.miaosha-tu {
+    height: 380px;
+    background: url("../miao.dangdang.com/images/miaosha2.jpg")no-repeat center;
+}
+
+/*倒计时定时器*/
+
+.scrollbar {
+    height: 60px;
+    width: 100%;
+    background-color: #3c3c3c;
+    position: relative;
+    margin-top: 10px;
+    top: 0px;
+    z-index: 1;
+}
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-top: 0;
+}
+.scroll {
+    width: 1200px;
+    height: 60px;
+    margin: 0 auto;
+    padding: 0 40px;
+    position: relative;
+    background: #3c3c3c;
+    overflow: hidden;
+}
+
+.scroll .btn1 {
+    width: 58px;
+    height: 60px;
+    display: block;
+    position: absolute;
+    top: 0;
+    background: url("../miao.dangdang.com/images/sc_btn.png") no-repeat;
+}
+.scroll .btn1:hover{
+    background: url("../miao.dangdang.com/images/sc_btn.png") 0px -60px no-repeat;
+}
+.scroll .btn1 .left {
+    background-position: 0 0;
+    left: 0;
+}
+.scroll .btn2 {
+    width: 58px;
+    height: 60px;
+    display: block;
+    position: absolute;
+    right: 40px;
+    background: url("../miao.dangdang.com/images/sc_btn.png")no-repeat -58px 0px;
+}
+.scroll .btn2 .right {
+    background-position: -58px 0;
+    right: 50px;
+    background: url("../miao.dangdang.com/images/01.png") -58px -60px no-repeat;
+}
+.scroll .btn2:hover{
+    background: url("../miao.dangdang.com/images/sc_btn.png") -58px -60px no-repeat;
+}
+
+.msdjs {
+    list-style: none;
+    display: block;
+    padding-left: 60px;
+
+}
+.msdjs li {
+    width: 160px;
+    box-sizing: border-box;
+    text-align: center;
+    color: #646464;
+    font-size: 14px;
+    cursor: pointer;
+    padding-top: 6px;
+    height: 60px;
+    float: left;
+    letter-spacing: 4px;
+    /*background:url("../miao.dangdang.com/images/03.png") no-repeat -10px 0;*/
+    background:url("../miao.dangdang.com/images/04.gif") no-repeat right center;
+}
+.msdjs li span {
+    display: block;
+    margin-left: 25px;
+
+}
+.msdjs li span:nth-child(1){
+    font: 24px/30px "verdana";
+}
+.msdjs li.active {
+    background: url("../miao.dangdang.com/images/03.png") no-repeat right center;
+    margin-left: -24px;
+    width: 170px;
+    padding-left: 12px;
+}
+
+
+
+
+/*倒计时秒杀*/
+.msdjs2 {
+    width: 1200px;
+    height: 65px;
+    margin-top: 10px;
+}
+.msdjs2 div {
+    float: left;
+}
+.msdjs2 .boxleft {
+    width: 472px;
+    height: 32px;
+    border-bottom: 1px solid #cccccc;
+}
+.msdjs2 .boxcentre {
+    width: 256px;
+    height: 65px;
+    color: orange;
+    font-size: 18px;
+    text-align: center;
+    line-height: 65px;
+}
+.msdjs2 .boxcentre .time{
+    margin: 0 auto;
+    width: 200px;
+    height: 65px;
+    padding-left: 25px;
+}
+.msdjs2 .boxcentre .time strong {
+    font-size: 20px;
+}
+.msdjs2 .boxcentre .time #day {
+    color: #404040;
+    font-size: 14px;
+}
+.msdjs2 .boxright {
+    width: 472px;
+    height: 32px;
+    border-bottom: 1px solid #cccccc;
+
+}
+
+/*==========================================*/
+
+/*速去秒杀*/
+.daheiz {
+    width: 1200px;
+    height: 4460px;
+}
+.daheiz ul {
+    width: 1220px;
+    overflow: hidden;
+    padding-top: 14px;
+}
+.daheiz ul li {
+    display: inline-block;
+    width: 570px;
+    height: 300px;
+    margin: 0px 20px 20px 0;
+    float: left;
+    border: 10px solid #f4f4f4;
+}
+.daheiz ul li:hover {
+    border: 10px solid sandybrown;
+}
+.daheiz ul li .name {
+    font-size: 14px;
+    line-height: 22px;
+    color: #323232;
+    display: block;
+    width: 250px;
+    height: 40px;
+    overflow: hidden;
+    float: right;
+    padding-top: 30px;
+}
+
+.daheiz li .miaojia {
+    color: #ff2832;
+    line-height: 20px;
+    padding: 10px 0 0;
+    float: right;
+}
+
+.daheiz .imgl {
+    float: left;
+}
+.daheiz .boxr {
+    float: right;
+    position: relative;
+    padding: 30px 10px 10px;
+}
+.daheiz .boxr .spana {
+    width: 248px;
+    height: 40px;
+    overflow: hidden;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+.daheiz .boxr p {
+    width: 248px;
+    height: 26px;
+    line-height: 26px;
+    font-size: 12px;
+    padding-top: 10px;
+    color: #f00;
+}
+.daheiz .boxr p span {
+    font-size: 20px;
+    color: #f00;;
+}
+.huatiao {
+    width: 248px;
+    height: 17px;
+    font: 12px/18px "Simsun";
+    color: #fff;
+    background: url("../miao.dangdang.com/images/second_buy_icon.png") 0 -125px no-repeat;
+    text-align: right;
+    margin: 20px 0;
+}
+.huatiao span {
+    width: 46%;
+    display: block;
+    height: 17px;
+    background: url("../miao.dangdang.com/images/progress_blank.png") right -41px no-repeat;
+    border-radius: 8px 0 0 8px;
+}
+.daheiz .boxr .msl{
+    color: #969696;
+    font-size: 12px;
+}
+.daheiz .boxr .msbut {
+    position: absolute;
+    bottom: -45px;
+    left: 10px;
+    height: 60px;
+    width: 248px;
+}
+.daheiz .boxr .msbut a {
+    width: 200px;
+    height: 36px;
+    background: url("../miao.dangdang.com/images/second_buy_icon.png") no-repeat;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.daheiz .boxr .msbut #not {
+    background: url("../miao.dangdang.com/images/55.png") no-repeat -94px -160px;
+}
+.daheiz .boxr #mk {
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    left: -302px;
+    top: 0;
+}
+.daheiz .boxr .msbut a:hover {
+    background: url("../miao.dangdang.com/images/second_buy_icon.png") no-repeat 0 -36px;
+}
+
+
+/*固定广告*/
+.guang {
+    width: 40px;
+    height: 40px;
+    font: 12px/40px "simsun";
+    text-align: center;
+    color: #fff;
+    background-color: #474747;
+    position: fixed;
+    right: 0;
+    bottom: 10px;
+}
+
+/*温馨提示*/
+.wenxin {
+    height: 165px;
+    position: relative;
+}
+.wenxin .boxwx {
+    height: 31px;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+
+}
+.wenxin .boxwx span {
+    font-size: 24px;
+    width: 96px;
+    height: 30px;
+    /*background-color: aqua;*/
+    text-align: center;
+    line-height: 30px;
+    margin: 0 auto;
+    display: block;
+    border-bottom: 2px solid orange;
+}
+.wenxin .towp {
+    width: 100%;
+    height: 136px;
+    /*background-color: red;*/
+}
+.wenxin .towp p {
+    line-height: 20px;
+    padding: 22px 0 0 22px;
+    font-size: 14px;
+}
+.wenxin .tu1 {
+    width: 17px;
+    height: 17px;
+    background: url("../miao.dangdang.com/images/icon.png") no-repeat -230px -80px;
+    position: absolute;
+    left: 0;
+    top: 98px;
+}
+.wenxin .tu2 {
+    width: 17px;
+    height: 17px;
+    background: url("../miao.dangdang.com/images/icon.png") no-repeat -230px -80px;
+    position: absolute;
+    left: 0;
+    top: 56px;
+}
+
+/*友情链接*/
+.bottomup {
+    height: 250px;
+    width: 100%;
+    margin-top: 40px;
+    border-top: 2px solid red;
+}
+.bottomup .up {
+    background-color: #fafafa;
+    border-bottom: 1px solid #ebebeb;
+    width: 100%;
+    min-width: 960px;
+    height: 80px;
+}
+.bottomup .up div {
+
+    width: 940px;
+    height: 80px;
+}
+.bottomup .up div a {
+    width: 187px;
+    float: left;
+    height: 80px;
+    padding: 0 0 0 48px;
+}
+.bottomup .up div a span {
+    width: 138px;
+    height: 52px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.bottomup .up div a .span1{
+    background: url("../miao.dangdang.com/images/footer_bg.png") no-repeat 0 1px;
+}
+.bottomup .up div a .span2{
+    background: url("../miao.dangdang.com/images/footer_bg.png") no-repeat 0 -52px;
+}
+.bottomup .up div a .span3{
+    background: url("../miao.dangdang.com/images/footer_bg.png") no-repeat 0 -104px;
+}
+.bottomup .up div a .span4{
+    background: url("../miao.dangdang.com/images/footer_bg.png") no-repeat 0 -156px;
+}
+
+
+.bottomup .shopbase {
+    width: 920px;
+    height: 170px;
+
+}
+.bottomup .shopbase div {
+    width: 153px;
+    text-align: center;
+    float: left;
+    padding-top: 30px;
+}
+.bottomup .shopbase div span {
+    display: block;
+    padding-left: 30px;
+    font-size: 14px;
+    font-family: "microsoft yahei";
+    color: #323232;
+    height: 36px;
+    line-height: 36px
+}
+.bottomup .shopbase div ul {
+    padding-left: 30px;
+}
+.bottomup .shopbase div a {
+    color: #7d7d7d;
+    font-size: 12px;
+}
+.bottomup .shopbase div a:hover {
+    text-decoration: underline;
+    color: #f44d20;
+}
+
+
+/*公司信息*/
+.boxaa {
+    width: 100%;
+    height: 10px;
+    border-top: 1px solid #ebebeb;
+}
+.lastend {
+    height: 170px;
+    width: 920px;
+    margin-top: 30px;
+}
+.lastend .lasttop {
+    line-height: 20px;
+    width: 920px;
+    height: 30px;
+}
+
+.lastend .lasttop a {
+    color: #8c8c8c;
+    font-size: 12px;
+    display: block;
+    float: left;
+}
+.lastend .lasttop a:hover{
+    text-decoration: underline;
+    color: #f44d20;
+}
+.lastend .lasttop a:nth-child(1){
+    padding-left: 190px;
+}
+.lastend .lasttop span {
+    float: left;
+    color: #8c8c8c;
+    font-size: 10px;
+    padding: 0 10px ;
+}
+
+
+
+
+.lastend .lastdixia {
+    line-height: 20px;
+    text-align: center;
+    width: 960px;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+.lastend .lastdixia span {
+    display: inline-block;
+    float: none;
+    font-size: 14px;
+}
+.lastend .lastdixia a {
+    font-size: 14px;
+    color: #000;
+
+}
+.lastend .lastdixia a:hover{
+    color: #f48570;
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+

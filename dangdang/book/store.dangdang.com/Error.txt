@@ -1,0 +1,3 @@
+﻿文件下载网址  =>  文件保存路径
+http://store.dangdang.com/Standard/Framework/Extend/hosts/css/images/bg_del.png  =>  F:\黑马前端\就业班-文件\WebChat\look\单页扒站小工具\store.dangdang.com\images\bg_del.png
+http://store.dangdang.com/images/model/guan/url_none.png  =>  F:\黑马前端\就业班-文件\WebChat\look\单页扒站小工具\store.dangdang.com\images\url_none.png

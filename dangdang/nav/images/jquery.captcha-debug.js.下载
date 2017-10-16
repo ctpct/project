@@ -1,0 +1,207 @@
+/**   (c) 2016 youhongyu	*/
+/**  		*/
+
+(function(jQuery, window) {
+
+	var defaults = {
+		type : '',
+		top : 0,
+		left : 0,
+		img : '',
+		width : '',
+		height : '',
+		tipTemplate : '<div class="Captcha-operate"><label class="error is-visible">验证码已过期，请刷新重试</label><label class="Captcha-prompt">请点击图中所有的倒立文字</label><span class="Ucc-captcha-refresh Captcha-refresh js-refreshCaptcha sprite-index-icon-refresh"></span></div>',
+		template : '<div class="Captcha-imageConatiner"><img src="{img}" class="Ucc_captcha Captcha-image"></div>',
+		context : null
+	};
+
+	window.CaptchaImage = function(options) {
+		//参数设置
+		this.options = jQuery.extend({}, defaults, options);
+		//填充提示泡泡的对象 TODO
+		this.context = jQuery(this.options.context || jQuery('body'));
+		this.css = {};
+		this.create();
+	};
+
+	window.CaptchaImage.prototype = {
+
+		create : function() {
+			var tmpl = window.CaptchaImage.prototype.tmpl;
+			this.tipText = jQuery(tmpl(this.options.tipTemplate));
+			this.bubble = jQuery(tmpl(this.options.template, {
+				img : (this.options.img + '?t=' + Date.parse(new Date()))
+			}));
+			this.prepare();
+		},
+
+		prepare : function() {
+			var isAlreadyInserted = this.bubble.get(0).parentNode;
+
+			this.applyStyles();
+
+			if (isAlreadyInserted !== this.context) {
+				this.append();
+			}
+		},
+		//样式设置
+		applyStyles : function() {
+			this.css.width = this.options.width;
+			this.css.height = this.options.height;
+			//TODO  样式表
+			this.bubble.css(this.css).addClass(this.options.type);
+			// remember calculated position for use by external components
+			this.realLeft = this.css.left;
+			this.realTop = this.css.top;
+		},
+		append : function() {
+			var body = this.context;
+			jQuery(body).html("");
+			this.tipText.appendTo(body);
+			this.bubble.appendTo(body);
+		},
+		adjust : function(options) {
+			jQuery.extend(this.options, options);
+			this.prepare();
+		},
+		tmpl : function(template, obj, escapeContent) {
+			for ( var key in obj) {
+				if (obj[key] === null)
+					obj[key] = '';
+				if (typeof (obj[key]) === 'object' && obj[key].length) {
+					obj[key] = obj[key].join(', ');
+				}
+				template = template.replace(new RegExp('{' + key + '}', 'g'), escapeContent ? escape(obj[key]) : obj[key]);
+			}
+			return template;
+		}
+	};
+}(jQuery, window));
+/**   (c) 2016 youhongyu  	*/
+/**   	*/
+
+(function(jQuery, CaptchaImage) {
+
+	// jQuery.fn.captcha.defaults references this object. jQuery.fn.captcha.defaults should be used for extension
+	var defaults = {
+		img : '',
+		width : '',
+		height : '',
+		hasHideButton : true,
+		buttonTemplate : '<div class="Ucc-button Captcha-button" data-num="{buttonNum}" style="display:block;position:absolute;" title="{hideText}"></div>',
+		buttonHideText : ''
+	}, liveBubbles = [], msieOld = navigator.appName === 'Microsoft Internet Explorer' && window.document.documentMode < 10;
+
+	jQuery.fn.captcha = function(settings, adjustments) {
+		if (typeof settings === 'string') {
+			this.trigger({
+				type : settings + '.bubble',
+				adjustments : adjustments
+			});
+			return this;
+		}
+		return this.each(function() {
+			var boll = {};
+			var $me = jQuery(this), options = jQuery.extend({}, jQuery.fn.captcha.defaults, settings, $me.data('captcha') || {}), width = options.width ? options.width : 200, height = options.height ? options.height : 100, captcha, button, _private, offset, context;
+			context = $me;
+			$me.addClass('Captcha');
+
+			offset = $me.position();
+			options.top = offset.top;
+			options.left = offset.left;
+
+			_private = {
+				init : function() {
+					captcha = new CaptchaImage({
+						top : options.top,
+						left : options.left,
+						img : options.img,
+						width : options.width,
+						height : options.height,
+						type : options.type,
+						context : context
+					// could be undefined
+					});
+
+					$me.bind('click.bubble', _private.imgClick);
+					$me.find('.Ucc-captcha-refresh').bind('click.bubble', _private.refreshImg);
+					$me.find('.Captcha-imageConatiner').bind('click.bubble', _private.clearErrorTip);
+				},
+				imgClick : function(e) {
+					var e = window.event || e;
+					var theObj1 = e.target || e.srcElement;
+					if (jQuery(theObj1).hasClass("Ucc_captcha")) {
+						var imgOffset = jQuery('.Captcha-imageConatiner', $me).offset();
+						//var left = e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft - options.imgLeft ;
+						//var top = e.clientY + document.body.scrollTop + document.documentElement.scrollTop - options.imgTop;
+						//var left = e.pageX - imgOffset.left;
+						//var top = e.pageY - imgOffset.top;
+						var left = e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft - imgOffset.left;
+						var top = e.clientY + document.body.scrollTop + document.documentElement.scrollTop - imgOffset.top;
+						_private.addButtonY(left, top);
+					}
+				},
+				addButtonY : function(left, top) {
+					var buttonTotal = jQuery('.Ucc-button', $me).length;
+					if (buttonTotal == 5) {
+						$me.find(".Captcha-prompt").hide().end().find(".Captcha-operate .error").text('最多只能选择5个点').show();
+						return false;
+					}
+
+					var buttonNum = jQuery('.Ucc-button:first', $me).attr('data-num');
+					buttonNum = buttonNum ? (++buttonNum) : 1;
+					var tmpl = CaptchaImage.prototype.tmpl;
+					// I think this code smells.. Responsibility for the view should be in the same place.
+					// Could possibly move this into bubble.js
+					// or extract all view logic into a third component
+					button = jQuery(tmpl(options.buttonTemplate, {
+						hideText : options.buttonHideText,
+						buttonNum : buttonNum
+					})).css({
+						left : left - 6,
+						top : top - 6
+					}).insertAfter(captcha.bubble.find('.Ucc_captcha'));
+
+					button.bind('click.bubble', _private.removeButton)
+					boll["b" + buttonNum] = new Array(left, top);
+					$me.data("uccDolls", boll);
+				},
+				removeButton : function(e) {
+					var e = window.event || e;
+					var theObj2 = e.target || e.srcElement;
+					if (jQuery(theObj2).hasClass('Ucc-button')) {
+						//将样式从错误提示 恢复到正常状态
+						$me.find(".Captcha-operate .error").hide().end().find(".Captcha-prompt").show();
+
+						jQuery(theObj2).remove();
+						jQuery(theObj2).unbind('click.bubble');
+						var buttonNum = jQuery(theObj2).attr('data-num');
+						delete boll["b" + buttonNum];
+						$me.data("uccDolls", boll);
+					}
+				},
+				refreshImg : function(e) {
+					$me.captcha(options);
+					$me.data("uccDolls", []);
+
+					/*var e = window.event || e;
+					var theObj2 = e.target || e.srcElement;
+					if(jQuery(theObj2).hasClass('Ucc-captcha-refresh')){
+						//options.img = pageVar.login_captcha_url + '?t=' + Date.parse(new Date());
+						$me.captcha(options);
+						$me.data("uccDolls", []);
+					}*/
+				},
+				clearErrorTip : function() {
+					//第一次点击倒立文字图形，清空错误提示
+					if ($me.find(".Captcha-operate .error").is(':visible')) {
+						$me.find(".Captcha-operate .error").hide().end().find(".Captcha-prompt").show();
+					}
+				}
+			};
+			_private.init();
+			return $me;
+		});
+	};
+	jQuery.fn.captcha.defaults = defaults;
+}(jQuery, CaptchaImage));
