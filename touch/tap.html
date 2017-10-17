@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>触屏事件</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+        .box {
+            width: 320px;
+            height: 400px;
+            margin: 10px auto;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <script>
+        // 功能:单击
+        // 获取元素
+        var box = document.querySelector('.box');
+        // 定义变量
+        var startX,startY,endX,endY,startTime,endTime;
+        // 给Tap的元素添加touchstart事件，为了获取起始点的坐标
+        box.addEventListener('touchstart',function(e){
+            var touches = e.targetTouches[0];
+            startX = touches.clientX;
+            startY = touches.clientY;
+            // 获得一个开始的时间
+            startTime = new Date().getTime();
+        })
+        // 给Tap的元素添加touchend事件,为了获取结束点的坐标
+        box.addEventListener('touchend',function(e){
+            endTime = new Date().getTime();
+            var touches = e.changedTouches[0];
+            endX = touches.clientX;
+            endY = touches.clientY;
+            // 判断起始点的坐标和终止点的坐标的差值是否小于5并且事件差值是否小于300
+            // 如果小于则为点击事件
+            if(Math.abs(endX-startX)<5 && Math.abs(endY-startY)<5 && (endTime-startTime)<300){
+                alert('Tap手势触发了');
+            }            
+        })
+    </script>
+</body>
+</html>

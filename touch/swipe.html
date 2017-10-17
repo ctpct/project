@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>触屏事件</title>
+</head>
+
+<body>
+    <script>
+        // 功能:判断滑动放下，上下左右
+        // 声明变量
+        var startX, startY, endX, endY, absX, absY, direction;
+        // 给document添加touchstart事件 ，为了获取起始点的坐标
+        document.addEventListener('touchstart', function (e) {
+            var touches = e.targetTouches[0];
+            startX = touches.clientX;
+            startY = touches.clientY;
+        })
+        // 给document添加touchend事件,为了获取结束点坐标
+        document.addEventListener('touchend', function (e) {
+            var touches = e.changedTouches[0];
+            endX = touches.clientX;
+            endY = touches.clientY;
+            // 计算两个位置的绝对值
+            absX = Math.abs(endX - startX);
+            absY = Math.abs(endY - startY);
+            if (absX == absY) {
+                return;
+            }
+            // 三元运算符
+            // var direction = absX > absY ? 
+            // endX > startX ? '向右':'向左'
+            // :
+            // endY >startY ? '向下':'向上';
+            // console.log(direction);
+            // if else
+            // 判断是水平还是垂直
+            if (absX > absY) { //水平
+                if (endX > startX) {
+                    direction = '向右'; //方向
+                } else {
+                    direction = '向左';//方向
+                }
+            } else {//垂直
+                if (endY > startY) {
+                    direction = '向下';//方向
+                } else {
+                    direction = '向上';//方向
+                }
+            }
+            console.log(direction);
+        })
+    </script>
+</body>
+
+</html>

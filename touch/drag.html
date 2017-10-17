@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>触屏事件</title>
+    <style>
+        body,html{
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #f7f7f7;
+            overflow: hidden
+        }
+        .box {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>    
+    <script>
+        // 功能:拖拽物体
+        // 获取元素
+        var box = document.querySelector('.box');
+        // 声明变量
+        var startX,startY,endX,endY,startLeft,startTop;
+        // 获取手指的开始时的坐标，元素原始的位置
+        box.addEventListener('touchstart',function(e){
+            var touches = e.targetTouches[0];
+            startX = touches.clientX;
+            startY = touches.clientY;
+            startLeft = this.offsetLeft;
+            // console.log(startLeft);
+            startTop = this.offsetTop;
+            // console.log(startTop);
+        })
+        // 获取结束时的位置坐标
+        box.addEventListener('touchmove',function(e){
+            var touches = e.changedTouches[0];
+            endX = touches.clientX;
+            endY = touches.clientY;
+            // 设置当前的位置坐标
+            this.style.left = endX - startX + startLeft + 'px';
+            this.style.top = endY - startY + startTop + 'px';
+        })
+    </script>
+</body>
+</html>
