@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        html,body,ul {
+            margin: 0;
+            padding: 0;
+        }
+        html,body {
+            width: 100%;
+            height: 100%;
+        }
+        .carousel {
+            width: 100%;
+            overflow: hidden;
+        }
+        .carousel ul {
+            position: relative;
+            top: 0;
+            list-style: none;
+            /* overflow: hidden; */
+        }
+        .carousel li {
+            float: left;
+        }
+        .carousel a {
+            display: block;
+            width: 100%;
+        }
+        .carousel img {
+            width: 100%;
+            height: auto;
+            vertical-align:middle;
+        }
+    </style>
+    <title>触屏轮播图</title>
+</head>
+<body>
+    <div class="carousel">
+        <ul>
+            <li><a href="javascript:;"><img src="./image/0.png" alt=""></a></li>
+            <li><a href="javascript:;"><img src="./image/1.png" alt=""></a></li>
+            <li><a href="javascript:;"><img src="./image/2.png" alt=""></a></li>
+            <li><a href="javascript:;"><img src="./image/3.png" alt=""></a></li>
+            <li><a href="javascript:;"><img src="./image/4.png" alt=""></a></li>
+            <li><a href="javascript:;"><img src="./image/5.png" alt=""></a></li>
+            <li><a href="javascript:;"><img src="./image/6.png" alt=""></a></li>
+            <li><a href="javascript:;"><img src="./image/7.png" alt=""></a></li>
+        </ul>
+    </div>
+    <script>
+        // 获取元素
+        var carousel = document.querySelector('.carousel');
+        var ul = carousel.querySelector('ul');
+        var firstLi = ul.querySelector('li');
+        var lastLi = ul.querySelector('li:last-child');
+        // 声明变量
+        var arrLi,carouselWidth,timer,index=0,startX,endX;
+        function init() {
+            ul.appendChild(firstLi.cloneNode(true));
+            ul.insertBefore(lastLi.cloneNode(true),firstLi);
+            arrLi = document.querySelectorAll('li');
+            setWidth();
+            index++;
+            ul.style.left = -(index*carouselWidth) + 'px';
+            autoPlay();
+        }
+        function setWidth() {
+            carouselWidth = carousel.offsetWidth;
+            ul.style.width = arrLi.length * carouselWidth + 'px';
+            for(var i=0;i<arrLi.length;i++) {
+                arrLi[i].style.width = carouselWidth + 'px';
+            }
+        }
+        function autoPlay() {
+            timer = setInterval(function(){
+                index++;
+                ul.style.left = -(index * carouselWidth) + 'px';
+                ul.style.transition = 'all 1s';
+            },1500)
+        }
+        ul.addEventListener("webkitTransitionEnd",function(){
+            if(index == 0) {
+                index = 8;
+            }
+            if(index == 9){
+                index = 1;
+            }
+            ul.style.left = -(index * carouselWidth) + 'px';
+            ul.style.transition = ''; 
+        })
+        ul.addEventListener('touchstart',function(e){
+            clearInterval(timer);
+            var touches = e.targetTouches[0];
+            startX = touches.clientX;
+        })
+        ul.addEventListener('touchend',function(e){
+            autoPlay();
+            var touches = e.changedTouches[0];
+            endX = touches.clientX;
+            endX > startX ? index-- : index++;
+            ul.style.left = -(index * carouselWidth) + 'px';
+            ul.style.transition = 'all 1s';
+        })
+        init();
+    </script>
+</body>
+</html>
